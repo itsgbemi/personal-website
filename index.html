@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website of Gbemisola Oyeniyi.">
+  <meta name="keywords" content="portfolio, portfolio website, Nigerian, multi-talented woman, versatile, website designer, creative writer, graphics designer, voice over actor, voice over artiste, social media manager, growth marketer, web app developer">
+  <meta name="author" content="Gbemisola Oyeniyi">
+  <meta name="robots" content="index, follow">
+  <!-- Favicon -->
+  <meta name="theme-color" content="#090807">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Gbemisola Oyeniyi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #090807;
+      font-family: 'Courier Prime', monospace;
+      color: #fff8f3;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+line-height: 1.7;
+overflow-x:hidden;
+overflow-y:auto;
+    }
+
+    /* Header Styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: transparent;
+      border: none;
+    }
+
+    .logo {
+      font-family: 'Bevan', sans-serif;
+      font-weight: 400;
+      color: #f87b25;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      background-color: #f87b25;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icon:hover {
+      background-color: #ed8842;
+      transform: scale(1.05);
+    }
+
+    .icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      flex: 1;
+      width: 90vw;
+      margin: 10px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-images {
+      display: flex;
+      gap: 30px;
+      position: relative;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-images img {
+      width: 40%;
+      height: 40%;
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+    .content-images {
+      display: flex;
+      gap: 30px;
+      position: relative;
+      transition: transform 0.5s;
+margin-top: 20px;
+margin-left: 20px;
+    }
+
+    .content-images img {
+      width: 25%;
+      height: 25%; /* Adjusted to maintain aspect ratio */
+      border-radius: 15px;
+      transition: transform 0.5s;
+    }
+
+    /* Dots for Navigation */
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .dots div {
+      width: 12px;
+      height: 12px;
+      background-color: #212121;
+      border-radius: 50%;
+      margin: 20px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dots .active {
+      background-color: #f87b25;
+    }
+
+    /* Superpower Section Styles */
+    .superpower {
+      background-color: transparent;
+      border: 1px solid transparent;
+      flex-grow: 1;
+    }
+
+    .content-box {
+      width: 100%;
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: transparent;
+      color: #fff8f3;
+    }
+
+    .content-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .expand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f87b25;
+      color: #090807;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .expand-icon::before {
+      content: '+';
+    }
+
+    .expand-icon.expanded::before {
+      content: '-';
+    }
+
+    .section-heading {
+      font-family: 'Bevan', sans-serif;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .content-section {
+      display: block; /* Visible by default */
+      font-family: 'Courier Prime', monospace;
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .content-section.hide {
+      display: none; /* Hide when .hide class is applied */
+    }
+
+    /* Skill Section Styles */
+    .skill {
+      background-color: transparent;
+      border: 1px solid transparent;
+      flex-grow: 1;
+    }
+
+    .skill-content {
+      display: flex;
+      gap: 20px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .skill-box {
+      min-width: 300px;
+      height: auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #171514;
+      color: #fff8f3;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .skill-name {
+      font-size: 20px;
+      font-family: 'Bevan', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .skill-meter-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .skill-meter {
+      width: 100%;
+      height: 7px;
+      border-radius: 5px;
+      background-color: #f8af59;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .skill-meter-fill {
+      height: 100%;
+      background-color: #f87b25;
+    }
+
+    .skill-value {
+      font-family: 'Courier Prime', monospace;
+      font-size: 16px;
+    }
+
+    /* Web Apps Section Styles */
+    .web-apps .website-designs	.voice-acting .writing .graphics-design{
+      background-color: transparent;
+      border: 1px solid transparent;
+      flex-grow: 1;
+    }
+
+    .project-box {
+      min-width: 300px;
+      height: auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #171514;
+      color: #fff8f3;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .project-name {
+      font-size: 20px;
+      font-family: 'Bevan', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .view-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #f87b25;
+      color: #090807;
+      padding: 5px 10px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .view-button:hover {
+      background-color: #ed8842;
+      transform: scale(1.05);
+    }
+
+    .view-button img {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+    }
+
+    /* About Me Section Styles */
+    .about-me {
+      background-color: #212121;
+      border: 1px solid transparent;
+      flex-grow: 1;
+    }
+
+    /* Nav Arrow Styles */
+    .nav-arrows-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .nav-arrow {
+      width: 30px;
+      height: 30px;
+      background-color: #f87b25;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-size: 15px 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-arrow.left {
+      background-image: url('left-arrow.svg');
+    }
+
+    .nav-arrow.right {
+      background-image: url('right-arrow.svg');
+    }
+
+    .nav-arrow.disabled {
+      background-color: #999999;
+      cursor: not-allowed;
+    }
+
+    /* Footer Styles */
+    footer {
+      position: relative;
+      margin-top: 35px;
+      left: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      padding-bottom: 10px;
+    }
+
+    .footer-separator {
+      width: calc(100% - 40px);
+      height: 2px;
+      background-color: #f87b25;
+      margin: 0 auto 10px auto;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 481px) {
+      .logo {
+        font-size: 40px;
+      }
+
+      footer p {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 16px;
+      }
+
+      .social-icons {
+        gap: 5px;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .icon img {
+        width: 8px;
+        height: 8px;
+      }
+
+      .dots div {
+        width: 7px;
+        height: 7px;
+      }
+
+      .section-heading {
+        font-size: 16px;
+      }
+
+      .content-section {
+        font-size: 14px;
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+      .skill-box, .project-box {
+        min-width: 250px;
+      }
+
+      .nav-arrow {
+        width: 15px;
+        height: 15px;
+      }
+
+      .nav-arrow.left,
+      .nav-arrow.right {
+        background-size: 10px 10px;
+      }
+
+    .skill-name, .project-name {
+      font-size: 14px;
+    }
+
+    .skill-value { 
+      font-family: 'Courier Prime', monospace;
+      font-size: 14px;
+    }
+
+    .view-button {
+      font-size: 12px;
+    }
+
+}	
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GBEMISOLA OYENIYI</div>
+    <div class="social-icons">
+      <a href="mailto:oliveajike@gmail.com?subject=Hello%20Gbemi.%20Reaching%20out%20as%20regards.%20.%20.%20" class="icon" aria-label="Email">
+        <img src="mail.svg" alt="Mail">
+      </a>
+      <a href="https://github.com/itsgbemi" class="icon" aria-label="GitHub">
+        <img src="github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/gbemisola-oyeniyi-093248210" class="icon" aria-label="LinkedIn">
+        <img src="linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/icecoldalvy" class="icon" aria-label="Twitter">
+        <img src="twitter.svg" alt="Twitter">
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-images">
+      <img id="image-1" src="studio-photo.png" alt="A studio portrait picture of Gbemisola">
+    </div>
+    <div class="dots"></div>
+  </section>
+
+  <section class="superpower">
+    <div class="content-box">
+      <div class="content-header">
+        <div class="expand-icon"></div>
+        <h2 class="section-heading">SUPERPOWER</h2>
+      </div>
+      <div class="content-section">
+        <p>Gbemi sees her child-like way of thinking as a superpower. Even if not everyone gets it, she has a knack for finding humor in just about everything, even in serious situations. She's self-aware and recognizes how people often try to one-up each other over nothing. Open-minded and free from societal constraints, she lives life on her own terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skill">
+    <div class="content-box">
+      <div class="content-header">
+        <div class="expand-icon"></div>
+        <h2 class="section-heading">SKILL</h2>
+      </div>
+      <div class="content-section">
+        <p>Her skills are constantly evolving as she navigates the hustle of a capitalist world where you’ve got to earn a living. As of August 29, 2024, here’s the latest on her growing skill set, all carefully assessed by her own quirky standards.</p>
+        <div class="skill-content" id="skill-content">
+          <!-- Skill boxes will be dynamically generated here by JavaScript -->
+        </div>
+        <div class="nav-arrows-container">
+          <div class="nav-arrow left"></div>
+          <div class="nav-arrow right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="web-apps">
+    <div class="content-box">
+      <div class="content-header">
+        <div class="expand-icon"></div>
+        <h2 class="section-heading">WEB APPS</h2>
+      </div>
+      <div class="content-section">
+        <p>As of August 29, 2024, Gbemi is still exploring how to hack web app development using basic coding skills and tools like HTML, CSS, JavaScript, APIs, and Google Sheets.</p>
+        <div class="skill-content" id="web-apps-content">
+          <!-- Project boxes will be dynamically generated here by JavaScript -->
+        </div>
+        <div class="nav-arrows-container">
+          <div class="nav-arrow left"></div>
+          <div class="nav-arrow right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="website-designs">
+  <div class="content-box">
+    <div class="content-header">
+      <div class="expand-icon"></div>
+      <h2 class="section-heading">WEBSITE DESIGNS</h2>
+    </div>
+    <div class="content-section">
+      <p>She’s currently an enthusiastic learner, diving into coding, Wix and WordPress to design amazing websites.</p>
+      <div class="skill-content" id="website-designs-content">
+        <!-- Project boxes will be dynamically generated here by JavaScript -->
+      </div>
+      <div class="nav-arrows-container">
+        <div class="nav-arrow left"></div>
+        <div class="nav-arrow right"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voice-acting">
+  <div class="content-box">
+    <div class="content-header">
+      <div class="expand-icon"></div>
+      <h2 class="section-heading">VOICE ACTING</h2>
+    </div>
+    <div class="content-section">
+      <p>Your ears deserve to hear Gbemi's voice, even if it’s a bit commercialized. Well, she did share it for free samples in her dictionary app. Check out the Google Drive link below or visit her Fiverr page for audio samples and reviews from past clients.</p>
+      <div class="skill-content" id="voice-acting-content">
+        <!-- Project boxes will be dynamically generated here by JavaScript -->
+      </div>
+      <div class="nav-arrows-container">
+        <div class="nav-arrow left"></div>
+        <div class="nav-arrow right"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this section after the Voice Acting section -->
+<section class="writing">
+  <div class="content-box">
+    <div class="content-header">
+      <div class="expand-icon"></div>
+      <h2 class="section-heading">WRITING</h2>
+    </div>
+    <div class="content-section">
+      <p>Whenever she manages to catch a breath amidst the hustle of the capitalist world, she lets her inner child that dreams of becoming a reclusive writer come out to play.</p>
+      <div class="skill-content" id="writing-content">
+        <!-- Project boxes will be dynamically generated here by JavaScript -->
+      </div>
+      <div class="nav-arrows-container">
+        <div class="nav-arrow left"></div>
+        <div class="nav-arrow right"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="graphics-design">
+  <div class="content-box">
+    <div class="content-header">
+      <div class="expand-icon"></div>
+      <h2 class="section-heading">GRAPHICS DESIGN</h2>
+    </div>
+    <div class="content-section">
+      <p>Gbemi currently designs graphics with Canva and PicsArt.</p>
+      <div class="content-images">
+        <img src="now-on-skip.png" alt="Now on Skip">
+        <img src="club-flyer.png" alt="Club Flyer">
+        <img src="now-on-skip-1.png" alt="Now on Skip 1">
+        <img src="eid-design.png" alt="Eid Design">
+      </div>
+        <div class="nav-arrows-container">
+          <div class="nav-arrow left"></div>
+          <div class="nav-arrow right"></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="about-me">
+    <div class="content-box">
+      <div class="content-header">
+        <div class="expand-icon"></div>
+        <h2 class="section-heading">ABOUT ME</h2>
+      </div>
+      <div class="content-section">
+        <p>Hi there! If you’ve made it this far, you’ve gotten a pretty good glimpse of who I am. My full name is Oluwagbemisola Oyeniyi, but I go by Gbemisola Oyeniyi, dropping the Oluwa. I’ve also given myself a few nicknames like Alvy, Godgbemisola, and Manik, though some are escaping me right now. A lovely woman once nicknamed me "Carry Me," which is the English translation of Gbemi. My first name actually means "Carry me into wealth," and I hope the Yoruba belief that names carry power holds true for me, as I do dream of a prosperous life.</p>
+<br></br>
+<p>At heart, I’m an art girl, but the tech world has had me working hard to fund my dreams over the past three years. That sentence has made my ink run dry, so I’ll wrap it up by saying I’m currently exploring ways to create wealth without all the wear and tear of the capitalist grind. Let’s see where all this thinking takes me in the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-separator"></div>
+    <p>&copy; Gbemisola Oyeniyi. All rights reserved</p>
+  </footer>
+  
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heroImagesContainer = document.querySelector('.hero-images');
+  const dotsContainer = document.querySelector('.dots');
+  const skillContent = document.querySelector('.skill-content');
+  const leftArrow = document.querySelector('.nav-arrow.left');
+  const rightArrow = document.querySelector('.nav-arrow.right');
+  const designImagesContainer = document.querySelector('.design-images');
+
+
+  // Image data
+  const images = [
+    { id: 'image-2', src: 'gbemi-beach.png', alt: 'Gbemisola posing at the beach' },
+    { id: 'image-3', src: 'gbemi-smiling.png', alt: 'Gbemi wearing braids and a cute smile' },
+    { id: 'image-4', src: 'gbemi-in-native.png', alt: 'Gbemi in another native attire' },
+    { id: 'image-5', src: 'another-studio-photo.png', alt: 'Another studio photo of Gbemi' }
+  ];
+
+  images.forEach((imageData) => {
+    const img = document.createElement('img');
+    img.id = imageData.id;
+    img.src = imageData.src;
+    img.alt = imageData.alt;
+    heroImagesContainer.appendChild(img);
+  });
+
+  // Initialize hero images
+  let heroImages = document.querySelectorAll('.hero-images img');
+  let currentIndex = 0;
+
+  function updateDots() {
+    dotsContainer.innerHTML = '';
+    heroImages.forEach((img, index) => {
+      const dot = document.createElement('div');
+      dotsContainer.appendChild(dot);
+      if (index === 0) {
+        dot.classList.add('active');
+      }
+      dot.addEventListener('click', () => {
+        document.querySelector('.dots .active').classList.remove('active');
+        dot.classList.add('active');
+        currentIndex = index;
+        heroImagesContainer.style.transform = `translateX(-${40 * index}%)`;
+      });
+    });
+  }
+
+  updateDots();
+
+  function showImage(index) {
+    heroImagesContainer.style.transform = `translateX(-${40 * index}%)`;
+    document.querySelector('.dots .active').classList.remove('active');
+    dotsContainer.children[index].classList.add('active');
+  }
+
+  function updateImages() {
+    heroImages = document.querySelectorAll('.hero-images img');
+    updateDots();
+    showImage(currentIndex);
+  }
+
+  // Superpower section expand/collapse functionality
+  const expandIcons = document.querySelectorAll('.expand-icon');
+  const contentSections = document.querySelectorAll('.content-section');
+
+  expandIcons.forEach((icon, index) => {
+    icon.classList.add('expanded');
+    contentSections[index].classList.remove('hide');
+
+    icon.addEventListener('click', () => {
+      if (contentSections[index].classList.contains('hide')) {
+        contentSections[index].classList.remove('hide');
+        icon.classList.add('expanded');
+      } else {
+        contentSections[index].classList.add('hide');
+        icon.classList.remove('expanded');
+      }
+    });
+  });
+
+  // Skill section scroll functionality
+  const skills = [
+    { name: 'Creative Writing', value: 69 },
+    { name: 'Marketing', value: 69 },
+    { name: 'Voice Acting', value: 69 },
+    { name: 'Website Design', value: 37 },
+    { name: 'Content Design', value: 37 },
+    { name: 'Web App Development', value: 25 },
+    { name: 'Video Editing', value: 25 }
+  ];
+
+  skills.forEach(skill => {
+    const skillBox = document.createElement('div');
+    skillBox.classList.add('skill-box');
+
+    const skillName = document.createElement('div');
+    skillName.classList.add('skill-name');
+    skillName.textContent = skill.name;
+
+    const skillMeterContainer = document.createElement('div');
+    skillMeterContainer.classList.add('skill-meter-container');
+
+    const skillMeter = document.createElement('div');
+    skillMeter.classList.add('skill-meter');
+
+    const skillMeterFill = document.createElement('div');
+    skillMeterFill.classList.add('skill-meter-fill');
+    skillMeterFill.style.width = `${skill.value}%`;
+
+    skillMeter.appendChild(skillMeterFill);
+
+    const skillValue = document.createElement('div');
+    skillValue.classList.add('skill-value');
+    skillValue.textContent = `${skill.value}%`;
+
+    skillMeterContainer.appendChild(skillMeter);
+    skillMeterContainer.appendChild(skillValue);
+
+    skillBox.appendChild(skillName);
+    skillBox.appendChild(skillMeterContainer);
+
+    skillContent.appendChild(skillBox);
+  });
+
+  function updateArrowState() {
+    const scrollLeft = skillContent.scrollLeft;
+    const scrollWidth = skillContent.scrollWidth;
+    const clientWidth = skillContent.clientWidth;
+
+    leftArrow.classList.toggle('disabled', scrollLeft === 0);
+    rightArrow.classList.toggle('disabled', scrollLeft + clientWidth >= scrollWidth);
+  }
+
+  leftArrow.addEventListener('click', () => {
+    if (!leftArrow.classList.contains('disabled')) {
+      skillContent.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  });
+
+  rightArrow.addEventListener('click', () => {
+    if (!rightArrow.classList.contains('disabled')) {
+      skillContent.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  });
+
+  skillContent.addEventListener('scroll', updateArrowState);
+  updateArrowState(); // Initialize arrow state
+
+  // Function to handle swipe gestures
+  function handleSwipe(container, swipeLeftCallback, swipeRightCallback) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    container.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    container.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipeGesture();
+    });
+
+    function handleSwipeGesture() {
+      if (touchEndX < touchStartX) {
+        swipeLeftCallback(); // Swiped left
+      }
+      if (touchEndX > touchStartX) {
+        swipeRightCallback(); // Swiped right
+      }
+    }
+  }
+
+  // Apply swipe handling to the skill section
+  handleSwipe(skillContent, () => {
+    rightArrow.click();
+  }, () => {
+    leftArrow.click();
+  });
+
+  // Apply swipe handling to the hero section
+  handleSwipe(heroImagesContainer, () => {
+    if (currentIndex < heroImages.length - 1) {
+      currentIndex++;
+      showImage(currentIndex);
+    }
+  }, () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showImage(currentIndex);
+    }
+  });
+
+  // Web Apps section
+  const webAppsContent = document.querySelector('#web-apps-content');
+  const projects = [
+    { name: 'Free Yoruba Dictionary', link: 'https://freeyorubadictionary.vercel.app' },
+    { name: 'Random Advice Generator', link: 'https://advice-generator-by-gbemi.vercel.app/' }
+  ];
+
+  projects.forEach(project => {
+    const projectBox = document.createElement('div');
+    projectBox.classList.add('project-box');
+
+    const projectName = document.createElement('div');
+    projectName.classList.add('project-name');
+    projectName.textContent = project.name;
+
+    const viewButton = document.createElement('a');
+    viewButton.classList.add('view-button');
+    viewButton.href = project.link;
+    viewButton.target = '_blank';
+    viewButton.textContent = 'View';
+
+    const redirectIcon = document.createElement('img');
+    redirectIcon.src = 'redirect.svg';
+    redirectIcon.alt = 'Redirect';
+
+    viewButton.appendChild(redirectIcon);
+
+    projectBox.appendChild(projectName);
+    projectBox.appendChild(viewButton);
+
+    webAppsContent.appendChild(projectBox);
+  });
+
+  // Apply the same scroll functionality to the Web Apps section
+  const webAppsLeftArrow = document.querySelector('.web-apps .nav-arrow.left');
+  const webAppsRightArrow = document.querySelector('.web-apps .nav-arrow.right');
+
+  function updateWebAppsArrowState() {
+    const scrollLeft = webAppsContent.scrollLeft;
+    const scrollWidth = webAppsContent.scrollWidth;
+    const clientWidth = webAppsContent.clientWidth;
+
+    webAppsLeftArrow.classList.toggle('disabled', scrollLeft === 0);
+    webAppsRightArrow.classList.toggle('disabled', scrollLeft + clientWidth >= scrollWidth);
+  }
+
+  webAppsLeftArrow.addEventListener('click', () => {
+    if (!webAppsLeftArrow.classList.contains('disabled')) {
+      webAppsContent.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  });
+
+  webAppsRightArrow.addEventListener('click', () => {
+    if (!webAppsRightArrow.classList.contains('disabled')) {
+      webAppsContent.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  });
+
+  webAppsContent.addEventListener('scroll', updateWebAppsArrowState);
+  updateWebAppsArrowState(); // Initialize arrow state
+
+  // Apply swipe handling to the Web Apps section
+  handleSwipe(webAppsContent, () => {
+    webAppsRightArrow.click();
+  }, () => {
+    webAppsLeftArrow.click();
+  });
+
+  // Website Designs section
+  const websiteDesignsContent = document.querySelector('#website-designs-content');
+  const websiteDesigns = [
+    { name: 'My Portfolio Website', link: '#', buttonText: 'Currently viewing', buttonColor: '#999999', noIcon: true },
+    { name: 'Opulent Kitchen and Lounge', link: 'https://opulentkitchenandlounge.com' },
+    { name: 'Feliza African Grocery and Beauty Store', link: 'https://felizaafricanstore.com' }
+  ];
+
+  websiteDesigns.forEach(project => {
+    const projectBox = document.createElement('div');
+    projectBox.classList.add('project-box');
+
+    const projectName = document.createElement('div');
+    projectName.classList.add('project-name');
+    projectName.textContent = project.name;
+
+    const viewButton = document.createElement('a');
+    viewButton.classList.add('view-button');
+    viewButton.href = project.link;
+    viewButton.target = '_blank';
+    viewButton.textContent = project.buttonText || 'View';
+
+    if (project.buttonColor) {
+      viewButton.style.backgroundColor = project.buttonColor;
+      viewButton.style.pointerEvents = 'none';
+    }
+
+    if (!project.noIcon) {
+      const redirectIcon = document.createElement('img');
+      redirectIcon.src = 'redirect.svg';
+      redirectIcon.alt = 'Redirect';
+      viewButton.appendChild(redirectIcon);
+    }
+
+    projectBox.appendChild(projectName);
+    projectBox.appendChild(viewButton);
+
+    websiteDesignsContent.appendChild(projectBox);
+  });
+
+  // Voice Acting section
+  const voiceActingContent = document.querySelector('#voice-acting-content');
+  const voiceActingProjects = [
+    { name: 'Audio Samples', link: 'https://drive.google.com/drive/folders/123Z_l00dZHfN-_u7skkXE_MpOt9iIKDp', buttonText: 'Listen' },
+    { name: 'Reviews', link: 'https://www.fiverr.com/s/AydlDpB', buttonText: 'View' }
+  ];
+
+  voiceActingProjects.forEach(project => {
+    const projectBox = document.createElement('div');
+    projectBox.classList.add('project-box');
+
+    const projectName = document.createElement('div');
+    projectName.classList.add('project-name');
+    projectName.textContent = project.name;
+
+    const viewButton = document.createElement('a');
+    viewButton.classList.add('view-button');
+    viewButton.href = project.link;
+    viewButton.target = '_blank';
+    viewButton.textContent = project.buttonText;
+
+    const redirectIcon = document.createElement('img');
+    redirectIcon.src = 'redirect.svg';
+    redirectIcon.alt = 'Redirect';
+    viewButton.appendChild(redirectIcon);
+
+    projectBox.appendChild(projectName);
+    projectBox.appendChild(viewButton);
+
+    voiceActingContent.appendChild(projectBox);
+  });
+
+  // Apply scroll functionality to new sections
+  function setupScrolling(content, leftArrow, rightArrow) {
+    function updateArrowState() {
+      const scrollLeft = content.scrollLeft;
+      const scrollWidth = content.scrollWidth;
+      const clientWidth = content.clientWidth;
+
+      leftArrow.classList.toggle('disabled', scrollLeft === 0);
+      rightArrow.classList.toggle('disabled', scrollLeft + clientWidth >= scrollWidth);
+    }
+
+    leftArrow.addEventListener('click', () => {
+      if (!leftArrow.classList.contains('disabled')) {
+        content.scrollBy({ left: -300, behavior: 'smooth' });
+      }
+    });
+
+    rightArrow.addEventListener('click', () => {
+      if (!rightArrow.classList.contains('disabled')) {
+        content.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+    });
+
+    content.addEventListener('scroll', updateArrowState);
+    updateArrowState();
+
+    // Apply swipe handling
+    handleSwipe(content, () => {
+      rightArrow.click();
+    }, () => {
+      leftArrow.click();
+    });
+  }
+
+  setupScrolling(
+    websiteDesignsContent,
+    document.querySelector('.website-designs .nav-arrow.left'),
+    document.querySelector('.website-designs .nav-arrow.right')
+  );
+
+  setupScrolling(
+    voiceActingContent,
+    document.querySelector('.voice-acting .nav-arrow.left'),
+    document.querySelector('.voice-acting .nav-arrow.right')
+  );
+});
+
+// Add this to your existing JavaScript, after the voice acting section
+
+// Writing section
+const writingContent = document.querySelector('#writing-content');
+const writingProjects = [
+  { name: 'Stories', link: 'https://oluwagbemisolar.wordpress.com/category/novels/', buttonText: 'Read' },
+  { name: 'Poems', link: 'https://oluwagbemisolar.wordpress.com/category/poems/', buttonText: 'Read' },
+];
+
+writingProjects.forEach(project => {
+  const projectBox = document.createElement('div');
+  projectBox.classList.add('project-box');
+
+  const projectName = document.createElement('div');
+  projectName.classList.add('project-name');
+  projectName.textContent = project.name;
+
+  const viewButton = document.createElement('a');
+  viewButton.classList.add('view-button');
+  viewButton.href = project.link;
+  viewButton.target = '_blank';
+  viewButton.textContent = project.buttonText;
+
+  const redirectIcon = document.createElement('img');
+  redirectIcon.src = 'redirect.svg';
+  redirectIcon.alt = 'Redirect';
+  viewButton.appendChild(redirectIcon);
+
+  projectBox.appendChild(projectName);
+  projectBox.appendChild(viewButton);
+
+  writingContent.appendChild(projectBox);
+});
+
+setupScrolling(
+  writingContent,
+  document.querySelector('.writing .nav-arrow.left'),
+  document.querySelector('.writing .nav-arrow.right')
+);
+  </script>
+</body>
+</html>
